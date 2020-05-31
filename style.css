@@ -1,0 +1,37 @@
+.contact {
+    color: white;
+    position: realtive;
+    background: url(../Kontakt_Formular/corps.jpg) center fixed;
+    background-size: cover;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+}
+
+input {
+    color: white;
+    background: rgba(0,0,0,0.3);
+}
+
+input:focus {
+    background: rgba(0,0,0,0.8);
+}
+
+textarea {
+    color: white;
+    background: rgba(0,0,0,0.3);
+}
+
+textarea:focus {
+    background: rgba(0,0,0,0.8);
+}
+
+button {
+    color: white;
+    background-color: transparent;
+}
+
+header h2 {
+    color: white;
+    margin: 30px;
+}

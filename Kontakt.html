@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+
+<head>
+    <title>&copy;Titel</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Webocton - Scriptly (www.scriptly.de)" />
+    
+    <link href="style.css" type="text/css" rel="stylesheet" />   
+</head>  
+<body>
+    <div class="contact">
+    <header>
+        <h2>Kontakt:</h2>
+    </header>
+    
+    <ul>
+        <li><span class="glyphicon glyphicon-road" aria-hidden="true"></span>   Firma Stra&szlig;e Ort</li>
+        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>   0473/965072</li>
+        <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>   info@firma.de</li>
+        <li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>   <a href="#" >www.firma.de</a></li>
+    </ul>
+    <fieldset>
+        <legend>Daten eingeben:</legend>
+            <?php 
+                if(isset($_POST["submit"])) {
+                    mail("lukashofer2002@gmail.com", "Kontaktformular", 'Name: '.$_POST["name"]. 'E-Mail: '.$_POST["email"].'Priorit&auml;t: '.$_POST["priorit&auml;t"].'Nachricht: '.$_POST["nachricht"]);
+                }
+             ?>
+             <h1 style="color: red;">Das Kontaktformular wurde gesendet</h1>
+            <form action="index.php" method="post"> 
+                <label><b>Name: </b></label> <br />
+                    <input type="text" name="name" placeholder="Name:" required> <br />
+                <label><b>E-Mail:</b></label> <br />
+                    <input type="email" name="email"placeholder="E-Mail:" required> <br />
+                <label><b>Nachricht:</b><br /></label>
+                    <textarea rows="10" cols="50" name="message" placeholder="Text..." required></textarea> <br />
+                <button type="submit">Abschicken:</button>  
+                <select name="priorit&auml;t">
+                    <option value="hoch">HOCH</option>
+                    <option value="mittel">MITTEL</option>
+                    <option value="gering">GERING</option>
+                </select>  
+            </form>
+    </fieldset>
+    </div>
+</body>
+</html>
